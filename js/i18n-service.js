@@ -7,7 +7,7 @@ var gTrans = {
     },
     'title-word-1': {
         en: 'My ',
-        he: 'שלי'
+        he: 'חנות'
     },
     'title-word-2': {
         en: 'Book ',
@@ -15,7 +15,7 @@ var gTrans = {
     },
     'title-word-3': {
         en: 'Shop',
-        he: 'חנות'
+        he: 'שלי'
     },
     'book-id': {
         en: 'ID',
