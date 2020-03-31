@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+}
+
+.display {
+  font-size: 50px;
+}
+
+/* Table of Books */
+.table,
+td {
+  text-align: center;
+  margin-top: 2em;
+  padding: 10px;
+}
+
+.th-title,
+.th-price {
+  cursor: pointer;
+}
+
+.th-title:hover,
+.th-price:hover {
+  background-color: #c7c7c7;
+}
+
+/* Actions Buttons */
+.btn:hover {
+  opacity: 0.6;
+}
+
+/* Update Modal */
+.update-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.update-book-form {
+  background-color: #f4f4f4;
+  margin: 200px auto;
+  padding: 10px 20px;
+  width: 250px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: 1s;
+}
+
+/* Read Modal */
+.read-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #f4f4f4;
+  margin: 10% auto;
+  width: 70%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: 1s;
+}
+
+.modal-read-header h2 {
+  background: #989ea0;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.modal-read-header span {
+  font-size: 32px;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 20px;
+}
+
+.modal-body > img {
+  margin: auto auto;
+  padding: 0 10px;
+}
+
+.modal-footer {
+  background: #258cba;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.modal-footer span {
+  float: left;
+  margin-right: 10px;
+  margin-top: 2px;
+}
+
+.rate-btn {
+  float: left;
+  margin-left: 10px;
+  margin-top: 5px;
+  width: 60px;
+  height: 20px;
+  color: #fff;
+  background-color: #39393a;
+  border: 1px solid #d4d0d0;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  outline: none;
+}
+
+.save-rate-success {
+  display: none;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

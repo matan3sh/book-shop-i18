@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>MyBook Shop</title>
+  </head>
+  <body onload="onInit()">
+    <header>
+      <span data-trans="lang-choose"></span>
+      <select onchange="onSetLang(this.value)">
+          <option value="en">English</option>
+          <option value="he">עברית</option>
+      </select>
+  </header>
+
+    <div class="container mt-4">
+      <i class="display-4 d-flex justify-content-center fas fa-book-open text-primary"></i>
+      <h1 class="display-4 d-flex justify-content-center">
+        <div data-trans="title-word-1">My</div><span data-trans="title-word-2" class="text-primary ml-3">Book</span><div class="ml-3" data-trans="title-word-3"> Shop</div>
+      </h1>
+
+      <form class="book-form">
+        <div class="form-group">
+          <input type="text" id="title" class="form-control" data-trans="book-title-ph" placeholder="Book Title" />
+        </div>
+        <div class="form-group">
+          <input type="text" id="price" class="form-control" data-trans="book-price-ph" placeholder="Book Price"/>
+        </div>
+        <button data-trans="add-book-btn" onclick="onAddBook(event)" class="btn btn-primary btn-block">Add Book</button>
+      </form>
+
+      <table class="table table table-striped mt-5">
+        <thead>
+          <tr>
+            <th data-trans="book-id">ID</th>
+            <th data-trans="book-title" class="th-title" onclick="onSort(this)">TITLE</th>
+            <th data-trans="book-price" class="th-price" onclick="onSort(this)">PRICE</th>
+            <th data-trans="book-actions">ACTIONS</th>
+          </tr>
+        </thead>
+        <tbody class="book-list"></tbody>
+      </table>
+    </div>
+    
+    <ul class="pagination"></ul>
+    <div class="update-modal"></div>
+    <div class="no-books-modal"></div>
+    <div class="read-modal"></div>
+
+    <script src="js/storage-service.js"></script>
+    <script src="js/i18n-service.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/book-service.js"></script>
+    <script src="js/book-controller.js"></script>
+  </body>
+</html>
